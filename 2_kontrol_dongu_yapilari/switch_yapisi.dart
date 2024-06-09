@@ -1,5 +1,5 @@
 void main(List<String> args) {
-  String notDegeri = "DD";
+  String notDegeri = "AA";
 
   switch (notDegeri) {
     case "AA":
