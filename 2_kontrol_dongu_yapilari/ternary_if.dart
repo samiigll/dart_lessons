@@ -13,7 +13,7 @@ void main(List<String> args) {
   sayi1 < sayi2 ? kucukSayi2 = sayi1 : kucukSayi2 = sayi2;
   print("tanımlanan iki sayıdan küçük olanın değeri: $kucukSayi2");
 
-  kucukSayi = sayi2 < sayi1 ? sayi1 : sayi2;
+  kucukSayi = sayi2 < sayi1 ? sayi1 : sayi3;
   print("tanımlanan iki sayıdan küçük olanın değeri: $kucukSayi");
 
   String isim = "Ahmet", ad = "Ahmet";
