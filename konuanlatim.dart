@@ -1,46 +1,40 @@
+// Nesne Yönelimli Programlama (OOP - Object-Oriented Programming) ile Araba sınıfı örneği
 void main(List<String> args) {
-  // Break Kullanımı
-  // Bir sınıfta öğretmen, 10 öğrenciye sırayla soru soruyor. Ancak, 5. öğrenciye geldiğinde öğretmen duruyor.
-  for (int i = 0; i < 10; i++) {
-    if (i == 5) {
-      break; // 5. öğrenciye gelince dur
-    }
-    print("Öğrenci numarası: $i");
-  }
+  // Araba sınıfından bmw adında bir nesne oluşturuluyor
+  Araba bmw = Araba();
+  bmw.marka = "BMW";
+  bmw.model = "X5";
+  bmw.yil = 2020;
+  bmw.satildi = true;
+  bmw.durumYazdir();
 
-  // Sonuç: 0, 1, 2, 3, 4 numaralı öğrenciler ekrana yazdırılır, sonra durur.
+  // Araba sınıfından mercedes adında bir nesne oluşturuluyor
+  Araba mercedes = Araba();
+  mercedes.marka = "Mercedes";
+  mercedes.model = "C200";
+  mercedes.yil = 2021;
+  mercedes.satildi = false;
+  mercedes.durumYazdir();
 
-  // Continue Kullanımı
-  // Bir sınıfta öğretmen, 10 öğrenciye sırayla soru soruyor. Çift numaralı öğrencilere soru sormuyor ve onları atlıyor.
-  for (int i = 0; i < 10; i++) {
-    if (i % 2 == 1) {
-      continue; // Çift numaralı öğrencileri atla
-    }
-    print("Öğrenci numarası: $i");
-  }
-
-  // Sonuç: 1, 3, 5, 7, 9 numaralı öğrenciler ekrana yazdırılır, çift numaralı öğrenciler atlanır.
-
-  // Etiket (Label) Kullanımı
-// Bir parkta 2 farklı oyun alanı var, her oyun alanında 5 oyun aleti var. Eğer ikinci oyun alanındaki ikinci alete geldiğinde oyun oynamayı bırakıyorsu.
-
-  park:
-  for (int alan = 1; alan <= 2; alan++) {
-    // İki oyun alanı
-    oyunAletleri:
-    for (int alet = 1; alet <= 5; alet++) {
-      // Her alanda 5 oyun aleti
-      if (alan == 2 && alet == 2) {
-        break park; // 2. alandaki 2. oyuncağa gelince dur
-      }
-      print("Oyun Alanı $alan, Oyun Aleti $alet");
-    }
-  }
+  // Araba sınıfından audi adında bir nesne oluşturuluyor
+  var audi = Araba();
+  audi.marka = "Audi";
+  audi.model = "A4";
+  audi.yil = 2019;
+  audi.satildi = true;
+  audi.durumYazdir();
 }
 
-  // Sonuç: Sınıf 1, Öğrenci 1, Sınıf 1, Öğrenci 2 ekrana yazdırılır, sonra durur.
+// Araba sınıfı tanımlanıyor
+class Araba {
+  String marka = "";
+  String model = "";
+  int yil = 0;
+  bool satildi = false;
 
-  // Özet:
-  // break: Döngüyü durdurur. Örneğin, 5. öğrenciye geldiğinde durmak gibi.
-  // continue: O turu atlar, bir sonraki tura geçer. Örneğin, çift numaralı öğrencileri atlamak gibi.
-// Etiketler (Label): İç içe döngülerde belirli bir döngüyü durdurur. Örneğin, ikinci oyun alanındaki ikinci alete geldiğinde tüm döngüyü durdurmak gibi.
+  // Araba sınıfına ait durumYazdir metodu tanımlanıyor
+  void durumYazdir() {
+    String durum = satildi ? "satıldı" : "satılmadı";
+    print("$marka $model ($yil) $durum");
+  }
+}
