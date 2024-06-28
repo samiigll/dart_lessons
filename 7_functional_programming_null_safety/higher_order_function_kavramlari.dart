@@ -7,14 +7,14 @@ void main(List<String> args) {
   sayilar.forEach(callback);
   adiniYazdir("sami");
 
-  kendiForEachYapim(sayilar, (sayi) {
-    print("Kendi for each yapim $sayi");
+  kendiForEachYapim(sayilar, (sayi, index) {
+    print("index değeri $index ve sayi değeri $sayi");
   });
 }
 
-void kendiForEachYapim(List<int> liste, void Function(int) callback) {
+void kendiForEachYapim(List<int> liste, void Function(int, dynamic) callback) {
   for (int i = 0; i < liste.length; i++) {
-    callback(liste[i]);
+    callback(liste[i], i);
   }
 }
 
