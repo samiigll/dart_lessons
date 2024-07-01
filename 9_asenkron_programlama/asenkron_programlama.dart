@@ -1,5 +1,3 @@
-import 'dart:io';
-
 void main(List<String> args) {
   print("Anne çocuğu ekmek alamaya yollar.");
   ekmakAlmayaGit();
